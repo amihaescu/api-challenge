@@ -1,16 +1,22 @@
 package ro.amihaescu.challenge.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import ro.amihaescu.challenge.dto.EmployeeDTO;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
 
     @Id
@@ -20,7 +26,7 @@ public class Employee {
     private String email;
     private String fullName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date birthday;
+    private LocalDate birthday;
     @ElementCollection
     @CollectionTable(name = "hobbies")
     private List<String> hobbies;
