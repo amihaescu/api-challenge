@@ -19,7 +19,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Date;
 
 @SpringBootApplication
 @EnableSwagger2
@@ -52,9 +51,9 @@ public class Main {
     @Bean
     public CommandLineRunner createMockData(){
         return args -> {
-            employeeRepository.save(new Employee(null, "employee1@gmail.com", "Jon doe 1", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
-            employeeRepository.save(new Employee(null, "employee2@gmail.com", "Jon doe 2 ", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
-            employeeRepository.save(new Employee(null, "employee3@gmail.com", "Jon doe 3", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
+            employeeRepository.save(new Employee(null, "employee1@gmail.com", "John Doe 1", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
+            employeeRepository.save(new Employee(null, "employee2@gmail.com", "John Doe 2", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
+            employeeRepository.save(new Employee(null, "employee3@gmail.com", "John Doe 3", LocalDate.of(1991, 01, 02), Collections.singletonList("Dancing")));
         };
     }
 

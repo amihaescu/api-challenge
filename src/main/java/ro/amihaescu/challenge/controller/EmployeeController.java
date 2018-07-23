@@ -1,6 +1,8 @@
 package ro.amihaescu.challenge.controller;
 
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
+
+    private final static Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
 
     @Autowired
     private ModelMapper modelMapper;
@@ -68,6 +72,7 @@ public class EmployeeController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<EmployeeDTO> deleteEmployee(@PathVariable("id") Long id) {
+        LOGGER.debug("Deleting...");
         Optional<Employee> employeeOptional = employeeRepository.findById(id);
         if (employeeOptional.isPresent()) {
             employeeRepository.delete(employeeOptional.get());
