@@ -27,7 +27,7 @@ dependencies have been downloaded and added to the classpath. To start the appli
 The root context of the API is `/employee`. Further endpoints and methods can be found on the 
 Swagger UI `http://localhost:9100/swagger-ui.html`
 
-Once the application if running you can test it using `curl` or `postman`.
+Once the application is running you can test it using `curl` or `postman`.
 
 Curl requests could be created based on Swagger documentation or the Postman collection 
 included in this repo could be used as a starting point for testing manually.  
