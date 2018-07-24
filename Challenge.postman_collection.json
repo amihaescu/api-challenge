@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "a186f5f6-6759-4607-9459-f09452b61db0",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all employees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": null,\n        \"email\": \"employee15@gmail.com\",\n        \"fullName\": \"John Doe 1\",\n        \"birthday\": \"1991-01-02\",\n        \"hobbies\": [\n            \"Dancing\"\n        ]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:9100/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get first employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": null,\n        \"email\": \"employee15@gmail.com\",\n        \"fullName\": \"John Doe 1\",\n        \"birthday\": \"1991-01-02\",\n        \"hobbies\": [\n            \"Dancing\"\n        ]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:9100/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "s",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"email\": \"employee6@gmail.com\",\n    \"fullName\": \"John Doe 3\",\n    \"birthday\": \"1991-01-02\",\n    \"hobbies\": [\n        \"Dancing\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9100/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "s",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 7,\n    \"email\": \"employee10@gmail.com\",\n    \"fullName\": \"John Doe 3\",\n    \"birthday\": \"1991-01-02\",\n    \"hobbies\": [\n        \"Dancing\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9100/employee/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"employee",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:9100/employee/7",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"employee",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
